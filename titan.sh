@@ -20,7 +20,7 @@ download_node() {
     echo "Папка .titanedge уже существует. Удалите ноду и установите заново. Выход..."
     return 0
   fi
-
+  apt install sudo
   sudo apt install lsof
 
   ports=(1234 55702 48710)
@@ -37,7 +37,7 @@ download_node() {
   echo 'Начинаю установку...'
 
   cd $HOME
-
+  
   sudo apt update -y && sudo apt upgrade -y
   sudo apt-get install nano git gnupg lsb-release apt-transport-https jq screen ca-certificates curl -y
 
