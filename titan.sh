@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 channel_logo() {
   echo -e '\e[31m'
   cat << "EOF"
